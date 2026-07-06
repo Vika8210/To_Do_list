@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        #box{
+            height: 500px;
+            background-color: black;
+            display: flex;
+        }
+        #box1{
+            border-radius: 10px;
+            background-color: cornsilk;
+            margin:10px;
+            padding: 20px;
+            height:472px;
+            width: 220px;
+        }
+        #box1 h3{
+            margin: 15px 0;
+            cursor: pointer;
+        }
+        #box1 h3:hover{
+            color: gray;
+        }
+        #box2{
+            background-color: white;
+            flex: 1;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #taskInput{
+            padding: 8px;
+            width: 70%;
+        }
+        #addBtn{
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        #taskList{
+            list-style: none;
+            margin-top: 20px;
+        }
+        #taskList li{
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+        .completed{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="box1">
+            <h1>Vikash Pandey</h1>
+            <h3>To Add Task</h3>
+            <h3>Search</h3>
+            <h3 id="upcomingBtn">Upcoming</h3>
+            <h3 id="todayBtn">Today</h3>
+            <h3>Completed</h3>
+            <h3>Pending</h3>
+        </div>
+        <div id="box2">
+            <h2>My Tasks</h2>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addBtn">Add</button>
+            <label for="start">Select Date:</label>
+            <input type="date" id="start" name="trip-start">
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    <script src="To_Do.js"></script>
+</body>
+</html>
